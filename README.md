@@ -1,46 +1,38 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Hooks
 
-## Available Scripts
+In this repository i want to explain react-hooks with to ways implementation:
 
-In the project directory, you can run:
+- Class way
+- Hook way
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## What is react hooks?
 
-### `npm test`
+React follows the principle of component-based architecture. A component in React is an isolated and reusable piece of code. The components can be of two types – class components and functional components.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Components in React can be stateful or stateless:
 
-### `npm run build`
+* A stateful component declares and manages local state in it.
+* A stateless component is a pure function that doesn't have a local state and side-effects to manage.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## React Hooks and Stateful Logic
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+With React Hooks, we can isolate stateful logic and side-effects from a functional component. Hooks are JavaScript functions that manage the state's behaviour and side effects by isolating them from a component.
+So, we can now isolate all the stateful logic in hooks and use (compose them, as hooks are functions, too) into the components.
 
-### `npm run eject`
+## What exactly are react Hooks
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+React Hooks are simple JavaScript functions that we can use to isolate the reusable part from a functional component. Hooks can be stateful and can manage side-effects.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+* useState: To manage states. Returns a stateful value and an updater function to update it.
+* useEffect: To manage side-effects like API calls, subscriptions, timers, mutations, and more.
+* useContext: To return the current value for a context.
+* useReducer: A useState alternative to help with complex state management.
+* useCallback: It returns a memorized version of a callback to help a child component not re-render unnecessarily.
+* useMemo: It returns a memoized value that helps in performance optimizations.
+* useRef: It returns a ref object with a .current property. The ref object is mutable. It is mainly used to access a child component imperatively.
+* useLayoutEffect: It fires at the end of all DOM mutations. It's best to use useEffect as much as possible over this one as the useLayoutEffect fires synchronously.
+* useDebugValue: Helps to display a label in React DevTools for custom hooks.
