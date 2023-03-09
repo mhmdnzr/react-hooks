@@ -5,6 +5,7 @@ import ContextHook from "./hooks/basic/ContextHook";
 import { ReducerHook } from "./hooks/additional/ReducerHook";
 import { CallbackHook } from "./hooks/additional/callback/CallbackHook";
 import SearchFilter from "./hooks/additional/MemoHook";
+import { RefHook } from "./hooks/additional/RefHook";
 
 function App() {
     return (
@@ -16,7 +17,8 @@ function App() {
             <ContextHook />
             <ReducerHook initialCount={0} />
             <CallbackHook productId={5} referrer="mohammad" theme="dark" />
-            <SearchFilter />
+            {/* <SearchFilter /> */}
+            {/* <RefHook/> */}
         </div>
     );
 }
