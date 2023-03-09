@@ -19,3 +19,5 @@ interface ICountryList {
     flag: string;
     region: string;
 }
+
+interface IChatStatus { isOnline: boolean }

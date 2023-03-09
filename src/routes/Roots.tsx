@@ -10,6 +10,8 @@ import ContextHook from "../hooks/basic/ContextHook";
 import { EffectHook } from "../hooks/basic/EffectHook";
 import { CounterClass, CounterHook } from "../hooks/basic/StateHook";
 import Home from "../pages/Home";
+import DebugValueHook from "../hooks/additional/DebugHook";
+import DeferredHook from "../hooks/additional/Deferred/DeferredHook";
 
 const routers = createBrowserRouter([
     {
@@ -58,6 +60,13 @@ const routers = createBrowserRouter([
     {
         path: "/useImperativeHandle",
         element: <ImperativeHandleHook />,
+    },
+    {
+        path: "/useDebugValue",
+        element: <DebugValueHook />,
+    }, {
+        path: "/useDeferredValue",
+        element: <DeferredHook />,
     },
 ]);
 
