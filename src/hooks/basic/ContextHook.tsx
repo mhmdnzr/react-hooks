@@ -1,4 +1,4 @@
-import { createContext, memo, useContext, useMemo } from "react";
+import { createContext, memo, useContext, useMemo, useState } from "react";
 
 const themes = {
   light: {
@@ -14,9 +14,18 @@ const themes = {
 const ThemeContext = createContext(themes.light);
 
 function ContextHook() {
+  const [theme, setTheme] = useState(themes.dark);
+
   return (
-    <ThemeContext.Provider value={themes.dark}>
+    <ThemeContext.Provider value={theme}>
       <Button />
+      <button
+        onClick={() => {
+          setTheme(themes.light);
+        }}
+      >
+        Switch to light theme
+      </button>
     </ThemeContext.Provider>
   );
 }
@@ -60,17 +69,14 @@ function ContextHook() {
 // With useMemo
 function Button() {
   let theme = useContext(ThemeContext);
-  let bg = theme.background; // Your "selector"
-  let fg = theme.foreground; // Your "selector"
-
   return useMemo(() => {
     // The rest of your rendering logic
     return (
-      <button style={{ background: bg, color: fg }}>
+      <button style={{ background: theme.background, color: theme.foreground }}>
         I am styled by theme context!
       </button>
     );
-  }, [bg, fg]);
+  }, [theme]);
 }
 
 export default ContextHook;
