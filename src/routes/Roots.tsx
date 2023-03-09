@@ -13,6 +13,7 @@ import Home from "../pages/Home";
 import DebugValueHook from "../hooks/additional/DebugHook";
 import DeferredHook from "../hooks/additional/Deferred/DeferredHook";
 import UseidHook from "../hooks/additional/UseidHook";
+import { TransitionHook } from "../hooks/additional/Transition/TransitionHook";
 
 const routers = createBrowserRouter([
     {
@@ -65,12 +66,18 @@ const routers = createBrowserRouter([
     {
         path: "/useDebugValue",
         element: <DebugValueHook />,
-    }, {
+    },
+    {
         path: "/useDeferredValue",
         element: <DeferredHook />,
-    },{
+    },
+    {
         path: "/useId",
         element: <UseidHook />,
+    },
+    {
+        path: "/useTransition",
+        element: <TransitionHook />,
     },
 ]);
 

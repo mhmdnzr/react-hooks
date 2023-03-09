@@ -20,4 +20,12 @@ interface ICountryList {
     region: string;
 }
 
-interface IChatStatus { isOnline: boolean }
+interface IChatStatus {
+    isOnline: boolean;
+}
+
+interface ITabButton {
+    children: any;
+    isActive: boolean;
+    onClick: () => {};
+}
