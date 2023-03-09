@@ -29,3 +29,12 @@ interface ITabButton {
     isActive: boolean;
     onClick: () => {};
 }
+
+interface ICustomHookData {
+    [index: number]: {
+        userId: number;
+        id: number;
+        title: string;
+        completed: boolean;
+    };
+}

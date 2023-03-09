@@ -15,6 +15,7 @@ import DeferredHook from "../hooks/additional/Deferred/DeferredHook";
 import UseidHook from "../hooks/additional/UseidHook";
 import { TransitionHook } from "../hooks/additional/Transition/TransitionHook";
 import SyncExternalStoreHook from "../hooks/library/SyncExternalStoreHook";
+import CustomHook from "../hooks/custom/CustomHook";
 
 const rootsList = [
     {
@@ -98,6 +99,12 @@ const rootsList = [
         name: "useSyncExternalStore",
         path: "/useSyncExternalStore",
         element: <SyncExternalStoreHook />,
+    },
+    
+    {
+        name: "CustomHook",
+        path: "/useCustom",
+        element: <CustomHook />,
     },
 ];
 
