@@ -13,3 +13,9 @@ interface IData {
         count: number;
     };
 }
+
+interface ICountryList {
+    name: string;
+    flag: string;
+    region: string;
+}
