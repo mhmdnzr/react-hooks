@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import ErrorPage from "../pages/404";
-import { CallbackHook } from "../hooks/additional/callback/CallbackHook";
+import { CallbackHook } from "../hooks/additional/Callback/CallbackHook";
 import ImperativeHandleHook from "../hooks/additional/ImperativeHandleHook";
 import { LayoutEffectHook } from "../hooks/additional/LayoutEffectHook";
 import SearchFilter from "../hooks/additional/MemoHook";
@@ -12,6 +12,7 @@ import { CounterClass, CounterHook } from "../hooks/basic/StateHook";
 import Home from "../pages/Home";
 import DebugValueHook from "../hooks/additional/DebugHook";
 import DeferredHook from "../hooks/additional/Deferred/DeferredHook";
+import UseidHook from "../hooks/additional/UseidHook";
 
 const routers = createBrowserRouter([
     {
@@ -67,6 +68,9 @@ const routers = createBrowserRouter([
     }, {
         path: "/useDeferredValue",
         element: <DeferredHook />,
+    },{
+        path: "/useId",
+        element: <UseidHook />,
     },
 ]);
 
