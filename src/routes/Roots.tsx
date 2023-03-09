@@ -15,70 +15,87 @@ import DeferredHook from "../hooks/additional/Deferred/DeferredHook";
 import UseidHook from "../hooks/additional/UseidHook";
 import { TransitionHook } from "../hooks/additional/Transition/TransitionHook";
 
-const routers = createBrowserRouter([
+const rootsList = [
     {
+        name: "Home",
         path: "/",
         element: <Home />,
         errorElement: <ErrorPage />,
     },
     {
+        name: "stateClass",
         path: "/State/ClassComponent",
         element: <CounterClass />,
     },
     {
+        name: "stateFC",
         path: "/State/FC",
         element: <CounterHook />,
     },
     {
+        name: "useEffect",
         path: "/useEffect",
         element: <EffectHook />,
     },
     {
+        name: "useLayoutEffect",
         path: "/useLayoutEffect",
         element: <LayoutEffectHook />,
     },
     {
+        name: "useContext",
         path: "/useContext",
         element: <ContextHook />,
     },
     {
+        name: "useReducer",
         path: "/useReducer",
         element: <ReducerHook initialCount={0} />,
     },
     {
+        name: "useCallback",
         path: "/useCallback",
         element: (
             <CallbackHook productId={5} referrer="mohammad" theme="dark" />
         ),
     },
     {
+        name: "useMemo",
         path: "/useMemo",
         element: <SearchFilter />,
     },
     {
+        name: "useRef",
         path: "/useRef",
         element: <RefHook />,
     },
     {
+        name: "useImperativeHandle",
         path: "/useImperativeHandle",
         element: <ImperativeHandleHook />,
     },
     {
+        name: "useDebugValue",
         path: "/useDebugValue",
         element: <DebugValueHook />,
     },
     {
+        name: "useDeferredValue",
         path: "/useDeferredValue",
         element: <DeferredHook />,
     },
     {
+        name: "useId",
         path: "/useId",
         element: <UseidHook />,
     },
     {
+        name: "useTransition",
         path: "/useTransition",
         element: <TransitionHook />,
     },
-]);
+];
 
-export default routers;
+const routers = createBrowserRouter(rootsList);
+
+export { rootsList, routers };

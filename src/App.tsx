@@ -1,8 +1,17 @@
+import { Fragment } from "react";
 import { RouterProvider } from "react-router-dom";
-import routers from "./routes/Roots";
+import FooterComponent from "./components/shared/FooterComponent";
+import NavbarComponent from "./components/shared/NavbarComponent";
+import { routers } from "./routes/Roots";
 
 function App() {
-    return <RouterProvider router={routers} />;
+    return (
+        <Fragment>
+            <NavbarComponent />
+            <RouterProvider router={routers} />
+            <FooterComponent />
+        </Fragment>
+    );
 }
 
 export default App;
