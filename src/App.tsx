@@ -1,6 +1,7 @@
 import { EffectHook } from "./hooks/basic/EffectHook";
-import { LayoutEffectHook } from "./hooks/basic/LayoutEffectHook";
+import { LayoutEffectHook } from "./hooks/additional/LayoutEffectHook";
 import { CounterClass, CounterHook } from "./hooks/basic/StateHook";
+import ContextHook from "./hooks/basic/ContextHook";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <CounterHook />
       <EffectHook />
       <LayoutEffectHook />
+      <ContextHook/>
     </div>
   );
 }
